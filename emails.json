@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "sender": "manager@company.com",
+    "subject": "Project Deadline",
+    "body": "Please complete the report by Friday and share the update.",
+    "date": "2026-04-15"
+  },
+  {
+    "id": 2,
+    "sender": "hr@company.com",
+    "subject": "Meeting Invitation",
+    "body": "You are invited to attend a meeting tomorrow at 10 AM.",
+    "date": "2026-04-15"
+  },
+  {
+    "id": 3,
+    "sender": "client@business.com",
+    "subject": "Pending Approval",
+    "body": "Waiting for your approval on the proposal sent last week.",
+    "date": "2026-04-14"
+  }
+]
