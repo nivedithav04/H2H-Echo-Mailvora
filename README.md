@@ -25,10 +25,10 @@ Managing emails manually is time-consuming. Mailvora introduces an AI-based agen
 ---
 
 ## 📂 Project Structure
-mailvora/
+## mailvora/
 │
-├── app.py # Main execution file
-├── README.md # Project documentation
+- ├── app.py # Main execution file
+- ├── README.md # Project documentation
 │
 ├── data/
 │ └── email.json # Email dataset
