@@ -26,18 +26,19 @@ Managing emails manually is time-consuming. Mailvora introduces an AI-based agen
 
 ## 📂 Project Structure
 ## mailvora/
-│
+- │
 - ├── app.py # Main execution file
 - ├── README.md # Project documentation
-│
-├── data/
-│ └── email.json # Email dataset
-│
-├── utils/
-│ └── email_loader.py # Loads emails from JSON
-│
-└── agent/
-└── mail_agent.py # Email processing logic
+- │
+- ├── data/
+- │ └── email.json # Email dataset
+- │
+- ├── utils/
+- │ └── email_loader.py # Loads emails from JSON
+- │
+- └── agent/
+- └── mail_agent.py # Email processing logic
+  
 ## 📌 Day 1 – Project Setup
 
 - Created the Mailvora project idea and defined its purpose  
