@@ -10,4 +10,5 @@ for email in emails["emails"]:
     print(f"Subject: {email['subject']}")
     print(f"Result: {result}")
     print("-" * 40)
+    
 
