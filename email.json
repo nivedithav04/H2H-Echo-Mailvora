@@ -1,0 +1,8 @@
+{
+  "emails": [
+    {
+      "subject": "Hello",
+      "body": "Test email content"
+    }
+  ]
+}

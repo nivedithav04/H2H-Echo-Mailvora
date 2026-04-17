@@ -1,17 +1,13 @@
-import streamlit as st
-from utils.loader import load_emails
+from utils.email_loader import load_emails
+from agent.mail_agent import process_email
 
-st.set_page_config(page_title="Mailvora", layout="wide")
-
-st.title("📧🧠 Mailvora")
-st.subheader("AI Email & Communication Tracker")
+print("🚀 Mailvora Agent System Running...\n")
 
 emails = load_emails()
 
-st.write("## 📥 Inbox")
+for email in emails["emails"]:
+    result = process_email(email)
+    print(f"Subject: {email['subject']}")
+    print(f"Result: {result}")
+    print("-" * 40)
 
-for email in emails:
-    st.write("From:", email["sender"])
-    st.write("Subject:", email["subject"])
-    st.write("Message:", email["body"])
-    st.write("---")
