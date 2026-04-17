@@ -87,7 +87,7 @@ This system reduces cognitive load and ensures that no important communication i
 - Created GitHub repository and initialized project
 
 ---
-Day 2 progress: Improved agent workflow and email processing pipeline
+## 📅Day 2 progress: Improved agent workflow and email processing pipeline
 
 - Enhanced email parsing and structured handling
 - Improved agent decision-making logic
