@@ -7,3 +7,4 @@ def load_emails():
 if __name__ == "__main__":
     emails = load_emails()
     print(emails)
+    
