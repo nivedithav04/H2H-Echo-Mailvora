@@ -62,12 +62,32 @@ Managing emails manually is time-consuming. Mailvora introduces an AI-based agen
   - Output logging system
 - Fixed minor bugs in utility and loader files
 - Improved code structure for better readability and scalability
+  
+## 📅 Day 3 Progress
+- Implemented email classification logic
+- Added action extraction (task and deadline detection)
+- Integrated backend processing with Streamlit UI
+- Enhanced application to display categorized and actionable email insights
 
-### 🧠 Key Improvements:
-- More stable and reliable agent processing flow
-- Clear step-by-step email handling pipeline
-- Backend fully prepared for frontend integration
 
-### 📌 Current Status:
-- Backend agent system is stable and functional
-- Ready for UI development and integration in next phase
+## 🔑 Key Improvements (Day 1 → Day 3)
+
+- Transitioned from a static UI to an interactive email dashboard
+- Added email classification to categorize messages intelligently
+- Implemented action extraction to identify tasks and deadlines
+- Improved project structure by modularizing logic into separate utility files
+- Enhanced usability by displaying meaningful insights instead of raw email data
+
+
+## 🚀 Current Status
+
+The Mailvora application has evolved from a basic email viewer to an intelligent email assistant prototype.
+
+- A functional Streamlit-based interface is implemented
+- Emails are successfully loaded and displayed from a structured dataset
+- Basic classification of emails is integrated
+- Actionable insights such as tasks and deadlines are extracted
+- Backend logic and frontend UI are connected effectively
+
+The project is now in a working prototype stage with core features implemented.
+
