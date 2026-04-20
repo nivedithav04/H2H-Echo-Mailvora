@@ -12,5 +12,6 @@ def process_email(email):
         "task": action["task"],
         "deadline": action["deadline"],
         "followup": followup
+        
     }
 
