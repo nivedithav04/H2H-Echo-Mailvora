@@ -53,7 +53,11 @@ st.divider()
 # =========================
 # EMAIL LIST (Day 4 + 5 + 6)
 # =========================
-st.subheader("📥 Inbox")
+if category == "Action Required":
+    st.markdown(f"### 🚨 {email['subject']}")
+else:
+    st.markdown(f"### 📨 {email['subject']}")
+
 
 for email in emails:
     category = classify_email(email)
