@@ -16,32 +16,34 @@ st.set_page_config(page_title="Mailvora", layout="wide")
 st.title("📧 Mailvora")
 st.caption("Smart Email Intelligence Dashboard")
 
-# Load emails
+# =========================
+# LOAD EMAILS
+# =========================
 emails = load_emails()
 
 # =========================
-# SUMMARY DASHBOARD
+# SUMMARY DASHBOARD (Day 5)
 # =========================
 summary = generate_summary(emails, classify_email, detect_followup)
 
-col1, col2, col3, col4 = st.columns(4)
+c1, c2, c3, c4 = st.columns(4)
 
-col1.metric("📧 Total Emails", summary["total"])
-col2.metric("📌 Action Required", summary["action_required"])
-col3.metric("📅 Meetings", summary["meetings"])
-col4.metric("🔔 Follow-ups", summary["followups"])
+c1.metric("📧 Total Emails", summary["total"])
+c2.metric("📌 Action Required", summary["action_required"])
+c3.metric("📅 Meetings", summary["meetings"])
+c4.metric("🔔 Follow-ups", summary["followups"])
 
 st.divider()
 
 # =========================
-# SEARCH & FILTER
+# SEARCH & FILTER (Day 6)
 # =========================
 st.subheader("🔍 Search & Filter")
 
-col1, col2 = st.columns(2)
+f1, f2 = st.columns(2)
 
-search_query = col1.text_input("Search emails")
-selected_category = col2.selectbox(
+search_query = f1.text_input("Search emails")
+selected_category = f2.selectbox(
     "Filter by Category",
     ["All", "Action Required", "Meeting", "Follow-up", "Informational"]
 )
@@ -49,7 +51,7 @@ selected_category = col2.selectbox(
 st.divider()
 
 # =========================
-# EMAIL LIST
+# EMAIL LIST (Day 4 + 5 + 6)
 # =========================
 st.subheader("📥 Inbox")
 
@@ -68,21 +70,22 @@ for email in emails:
         continue
 
     # =========================
-    # EMAIL CARD
+    # EMAIL CARD UI
     # =========================
     with st.container():
         st.markdown(f"### 📨 {email['subject']}")
 
-        col1, col2 = st.columns([3, 1])
+        col_left, col_right = st.columns([3, 1])
 
-        with col1:
+        # LEFT SIDE
+        with col_left:
             st.write("📧 From:", email["sender"])
             st.write("📝 Message:", email["body"])
             st.write("📋 Task:", action["task"])
             st.write("⏰ Deadline:", action["deadline"])
 
-        with col2:
-            # Category badge
+        # RIGHT SIDE
+        with col_right:
             if category == "Action Required":
                 st.error(f"📌 {category}")
             elif category == "Meeting":
@@ -92,10 +95,10 @@ for email in emails:
             else:
                 st.success(f"📌 {category}")
 
-            # Follow-up status
             if followup == "Pending Follow-up":
                 st.warning("🔔 Pending")
             else:
                 st.success("✅ No Follow-up")
 
         st.divider()
+
